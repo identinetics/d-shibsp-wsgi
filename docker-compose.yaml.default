@@ -1,10 +1,10 @@
-version: "3"
+version: "3.5"
 services:
   shibsp:
     build:
       context: .
-    image: r2h2/shibsp-termino
-    container_name: termino
+    image: r2h2/shibsp-wsgi
+    container_name: shibsp_wsgi
     hostname: termino
     restart: unless-stopped
     environment:
