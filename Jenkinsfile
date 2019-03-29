@@ -16,7 +16,7 @@ pipeline {
                     export MANIFEST_SCOPE='local'
                     export PROJ_HOME='.'
                     ./dcshell/build -f docker-compose.yaml $nocacheopt || \
-                        echo "=== build failed with rc $?"
+                        (rc=$?; echo "build failed with rc rc?"; exit $rc)
                 '''
             }
         }
